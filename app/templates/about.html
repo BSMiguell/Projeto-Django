@@ -1,0 +1,847 @@
+{% load static %}<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'img/header/header__logo.png' %}"
+      type="image/x-icon"
+    />
+    <title>Fit Match</title>
+
+    <!-- ===== Boxicons CSS ===== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- ===== STYLE CSS ===== -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
+    <!-- ===== THEMES/COLOR - MODE ===== -->
+    <link
+      rel="stylesheet"
+      href="{% static 'css/theme/color-red.css' %}"
+      class="alternate-style"
+      title="color-1"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/theme/color-purple.css' %}"
+      class="alternate-style"
+      title="color-2"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/theme/color-pink.css' %}"
+      class="alternate-style"
+      title="color-3"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/theme/color-orange.css' %}"
+      class="alternate-style"
+      title="color-4"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/theme/color-green.css' %}"
+      class="alternate-style"
+      title="color-5"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/theme/color-blue.css' %}"
+      class="alternate-style"
+      title="color-6"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/theme/color-yellow.css' %}"
+      class="alternate-style"
+      title="color-7"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/theme/color-ceano.css' %}"
+      class="alternate-style"
+      title="color-8"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/theme/color-gray.css' %}"
+      class="alternate-style"
+      title="color-9"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/theme/color-light-green.css' %}"
+      class="alternate-style"
+      title="color-10"
+      disabled
+    />
+
+    <!-- ===== SCRIPT ===== -->
+    <script src="{% static 'js/main.js' %}" defer></script>
+    <script src="{% static 'js/theme.js' %}" defer></script>
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header>
+      <a href="../index.html" class="logo"
+        ><img src="{% static 'img/header/header__logo.png' %}"
+      /></a>
+
+      <nav>
+        <ul class="navbar">
+          <li><a href="../">Home</a></li>
+          <li><a href="../timeline">Timeline</a></li>
+          <li><a href="#" class="active">About</a></li>
+          <li><a href="../aboutUs">About Us</a></li>
+          <li><a href="../products1">Products</a></li>
+        </ul>
+
+        <div class="icons-mode">
+          <div class="bx bx-menu" id="menu-icon"></div>
+
+          <a class="login-icon" href="login.html"
+            ><i class="bx bxs-user"></i
+          ></a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT OF THE WEBSITE ===== -->
+    <main class="main">
+      <!-- ===== HOME ===== -->
+      <section class="home__section-sub">
+        <div class="circle"></div>
+        <div class="sub__home">
+          <div class="sub__home-text">
+            <div class="sub__home-text-h1">
+              <h1>
+                Não somos mais uma academia, somos a academia
+                <span class="section__title">Fit Match</span>
+              </h1>
+            </div>
+            <p>
+              Na era atual, em que a saúde e o bem-estar são prioridades para
+              muitas pessoas, encontrar um parceiro de treino adequado pode ser
+              um desafio. É aí que entra o FitMatch Site, uma plataforma
+              revolucionária dedicada a ajudar você a encontrar o parceiro ideal
+              para academia e exercícios físicos.
+            </p>
+            <a href="#" class="btn bnt__home">Ver mais</a>
+          </div>
+          <div class="sub__home-img-box">
+            <img
+              src="{% static 'img/subs-homes/home1.png' %}"
+              alt=""
+              class="img-box"
+            />
+            <div class="box-bow">
+              <div class="bow"></div>
+              <img
+                src="{% static 'img/subs-homes/home1.png' %}"
+                alt=""
+                class="img-box-2"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="home-imgHover"></div>
+      </section>
+
+      <!-- ===== PROGRAM ===== -->
+      <section class="program section__program">
+        <div class="container">
+          <div class="section__data">
+            <h2 class="section__subtitle">Nosso programa</h2>
+            <div class="section__titles">
+              <h2 class="section__title-border">CONSTRUA O SEU</h2>
+              <h3 class="section__title">MELHOR CORPO</h3>
+            </div>
+          </div>
+
+          <div class="program__container grid">
+            <article class="program__card">
+              <div class="program__shape">
+                <img
+                  src="{% static 'img/program/program1.png' %}"
+                  alt=""
+                  class="program__img"
+                />
+              </div>
+
+              <h3 class="program__title">Músculo flexível</h3>
+              <p class="program__description">
+                Criando tensão que temporariamente torna as fibras musculares
+                menores ou contraídas. Criando tensão que temporariamente torna
+                as fibras musculares menores ou contraídas.
+              </p>
+              <a href="#" class="program__button">
+                <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </article>
+
+            <article class="program__card">
+              <div class="program__shape">
+                <img
+                  src="{% static 'img/program/program2.png' %}"
+                  alt=""
+                  class="program__img"
+                />
+              </div>
+
+              <h3 class="program__title">Exercício Cardio</h3>
+              <p class="program__description">
+                Exercite sua frequência cardíaca e mantenha-a por um período
+                prolongado de tempo. Exercite sua frequência cardíaca e
+                mantenha-a por um período prolongado de tempo.
+              </p>
+              <a href="#" class="program__button">
+                <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </article>
+
+            <article class="program__card">
+              <div class="program__shape">
+                <img
+                  src="{% static 'img/program/program3.png' %}"
+                  alt=""
+                  class="program__img"
+                />
+              </div>
+
+              <h3 class="program__title">Yoga básico</h3>
+              <p class="program__description">
+                Diafragmática, esta é a técnica de respiração mais comum que
+                você encontrará na ioga.Diafragmática, esta é a técnica de
+                respiração mais comum que você encontrará na ioga.
+              </p>
+              <a href="#" class="program__button">
+                <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </article>
+
+            <article class="program__card">
+              <div class="program__shape">
+                <img
+                  src="{% static 'img/program/program4.png' %}"
+                  alt=""
+                  class="program__img"
+                />
+              </div>
+
+              <h3 class="program__title">Levantamento de peso</h3>
+              <p class="program__description">
+                Tenta um levantamento único de peso máximo de uma barra
+                carregada com placas de peso.Tenta um levantamento único de peso
+                máximo de uma barra carregada com placas de peso.
+              </p>
+              <a href="#" class="program__button">
+                <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== STARTING ===== -->
+      <section class="education container">
+        <div class="section__data">
+          <h2 class="section__subtitle">FitMatch - Inicia na Academia</h2>
+          <div class="section__titles">
+            <h2 class="section__title-border">BEM-VINDO AO</h2>
+            <h3 class="section__title">FITMATCH</h3>
+          </div>
+          <p class="section__paragraph">
+            Bem-vindo ao FitMatch, o seu guia completo para começar sua jornada
+            na academia e alcançar seus objetivos de condicionamento físico.
+          </p>
+        </div>
+
+        <div class="education-row">
+          <div class="education-column">
+            <h3 class="title">Benefícios</h3>
+
+            <div class="education-box">
+              <div class="education-content">
+                <div class="content">
+                  <div class="year">
+                    <i class="bx bxs-calendar"></i> 2022 - 2023
+                  </div>
+                  <h3>Por que iniciar na academia?</h3>
+                  <p>
+                    A academia é um ambiente ideal para melhorar sua saúde e
+                    forma física. Ao se exercitar regularmente, você pode
+                    desfrutar de uma série de benefícios, como aumento da força
+                    muscular, melhoria da resistência cardiovascular, perda de
+                    peso, aumento da flexibilidade e redução do estresse. Além
+                    disso, a academia oferece uma variedade de equipamentos e
+                    treinadores especializados para ajudá-lo a atingir seus
+                    objetivos de maneira eficaz e segura.
+                  </p>
+                </div>
+              </div>
+
+              <div class="education-content">
+                <div class="content">
+                  <div class="year">
+                    <i class="bx bxs-calendar"></i> 2022 - 2023
+                  </div>
+                  <h3>Como iniciar na academia?</h3>
+                  <p>
+                    Além do treinamento adequado, a alimentação desempenha um
+                    papel crucial no seu progresso na academia. Aqui estão
+                    alguns dos melhores suplementos e alimentos para quem está
+                    iniciando:
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Proteína:</strong> A proteína é essencial para o
+                      reparo e crescimento muscular. Alimentos ricos em proteína
+                      incluem frango, peixe, ovos, laticínios, leguminosas e
+                      suplementos de proteína em pó (Whey).
+                    </li>
+                    <li>
+                      <strong>Carboidratos complexos:</strong> Os carboidratos
+                      fornecem energia para os treinos. Opte por carboidratos
+                      complexos, como grãos integrais, batatas, arroz integral e
+                      aveia.
+                    </li>
+                    <li>
+                      <strong>Gorduras saudáveis:</strong> As gorduras saudáveis
+                      são importantes para a saúde geral. Inclua alimentos como
+                      abacate, azeite de oliva, castanhas e sementes na sua
+                      dieta.
+                    </li>
+                    <li>
+                      <strong>Vitaminas e minerais:</strong> Consuma uma
+                      variedade de frutas e legumes para obter vitaminas e
+                      minerais essenciais. Eles ajudam na recuperação muscular e
+                      na saúde em geral.
+                    </li>
+                    <li>
+                      <strong>Hidratação:</strong> Beba água suficiente para
+                      manter-se hidratado durante os treinos. A hidratação
+                      adequada ajuda na performance e na recuperação.
+                    </li>
+                    <li>
+                      <strong>Suplementos opcionais:</strong> Além de uma dieta
+                      equilibrada, você pode considerar suplementos como
+                      creatina, ômega-3 e multivitamínicos, mas sempre consulte
+                      um profissional de saúde antes de começar a usá-los.
+                    </li>
+                  </ul>
+                  <p>
+                    Lembre-se de que cada pessoa é única, então respeite seus
+                    limites e ouça seu corpo durante os treinos. Aproveite o
+                    processo e celebre suas conquistas ao longo do caminho!
+                  </p>
+                </div>
+              </div>
+
+              <div class="education-content">
+                <div class="content">
+                  <div class="year">
+                    <i class="bx bxs-calendar"></i> 2022 - 2023
+                  </div>
+                  <h3>Por que treinar com um parceiro?</h3>
+                  <p>
+                    Treinar com um parceiro pode ser uma ótima maneira de
+                    aumentar sua motivação e alcançar melhores resultados. Aqui
+                    estão alguns motivos pelos quais treinar com um parceiro
+                    pode ser vantajoso:
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Motivação mútua:</strong> Ter um parceiro de
+                      treino pode te motivar a se esforçar mais e se superar.
+                      Vocês podem se apoiar mutuamente, compartilhar conquistas
+                      e superar desafios juntos.
+                    </li>
+                    <li>
+                      <strong>Cobrança mútua:</strong> Quando você treina com um
+                      parceiro, há uma cobrança saudável entre ambos. Vocês
+                      podem definir metas, acompanhar o progresso um do outro e
+                      se responsabilizar mutuamente pelo compromisso com os
+                      treinos.
+                    </li>
+                    <li>
+                      <strong>Variedade e diversão:</strong> Treinar com um
+                      parceiro permite explorar exercícios e atividades
+                      diferentes. Vocês podem experimentar treinos em dupla,
+                      desafiar-se mutuamente e tornar a jornada de
+                      condicionamento físico mais divertida.
+                    </li>
+                    <li>
+                      <strong>Segurança:</strong> Ter um parceiro de treino pode
+                      aumentar a segurança durante os exercícios, especialmente
+                      ao realizar levantamento de peso ou exercícios mais
+                      intensos. Vocês podem se auxiliar nas técnicas corretas e
+                      oferecer suporte quando necessário.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="education-column">
+            <h3 class="title">Benefícios</h3>
+
+            <div class="education-box">
+              <div class="education-content">
+                <div class="content">
+                  <div class="year">
+                    <i class="bx bxs-calendar"></i> 2022 - 2023
+                  </div>
+                  <h3>Encontre o parceiro ideal com a FitMatch</h3>
+                  <p>
+                    Na FitMatch, entendemos a importância de encontrar o
+                    parceiro de treino ideal que se encaixe com sua rotina e
+                    forma de treinos. Nosso aplicativo exclusivo oferece
+                    recursos avançados de matchmaking, permitindo que você
+                    encontre pessoas com objetivos semelhantes, disponibilidade
+                    compatível e preferências de treino complementares. Você
+                    pode criar um perfil, pesquisar por parceiros de treino na
+                    sua área e iniciar conversas para encontrar a combinação
+                    perfeita.
+                  </p>
+                  <p>
+                    Com a FitMatch, você terá a oportunidade de compartilhar sua
+                    jornada de condicionamento físico com um parceiro que o
+                    motive, apoie e ajude a alcançar seus objetivos. Juntos,
+                    vocês poderão enfrentar desafios, superar limites e celebrar
+                    conquistas, tornando a experiência na academia ainda mais
+                    gratificante.
+                  </p>
+                </div>
+              </div>
+
+              <div class="education-content">
+                <div class="content">
+                  <div class="year">
+                    <i class="bx bxs-calendar"></i> 2022 - 2023
+                  </div>
+                  <h3>Como iniciar na academia?</h3>
+                  <p>
+                    Se você está começando do zero ou retomando sua rotina de
+                    exercícios, aqui estão algumas dicas para iniciar na
+                    academia:
+                  </p>
+                  <ol>
+                    <li>Defina seus objetivos de condicionamento físico.</li>
+                    <li>
+                      Consulte um profissional de educação física para obter
+                      orientação personalizada.
+                    </li>
+                    <li>
+                      Monte um programa de treinamento adequado às suas
+                      necessidades e metas.
+                    </li>
+                    <li>
+                      Comece devagar e aumente a intensidade gradualmente.
+                    </li>
+                    <li>
+                      Mantenha-se consistente e estabeleça uma rotina de
+                      treinamento regular.
+                    </li>
+                    <li>
+                      Combine exercícios de força, cardiovasculares e
+                      flexibilidade para obter resultados abrangentes.
+                    </li>
+                    <li>
+                      Acompanhe seu progresso e faça ajustes conforme
+                      necessário.
+                    </li>
+                    <li>
+                      Descanse e recupere-se adequadamente entre os treinos.
+                    </li>
+                    <li>
+                      Mantenha uma alimentação saudável e equilibrada para
+                      apoiar seus esforços de condicionamento físico.
+                    </li>
+                  </ol>
+                  <p>
+                    Além do treinamento adequado, a alimentação desempenha um
+                    papel crucial no seu progresso na academia. Aqui estão
+                    alguns dos melhores suplementos e alimentos para quem está
+                    iniciando:
+                  </p>
+                </div>
+              </div>
+
+              <div class="education-content">
+                <div class="content">
+                  <div class="year">
+                    <i class="bx bxs-calendar"></i> 2022 - 2023
+                  </div>
+                  <h3>Por que eu deveria me inscrever?</h3>
+                  <p>
+                    à FitMatch, a academia que está pronta para ajudá-lo(a) a
+                    alcançar seus objetivos de saúde e condicionamento físico!
+                    Estamos comprometidos em oferecer a você um ambiente
+                    acolhedor, instalações modernas e um programa abrangente
+                    para ajudá-lo(a) a atingir sua melhor forma física.
+                  </p>
+                  <ol>
+                    <li>
+                      Plano Básico: Este é um plano de adesão acessível,
+                      perfeito para quem está começando ou busca uma rotina de
+                      exercícios mais simples. Com o Plano Básico, você tem
+                      acesso às nossas instalações, incluindo a sala de
+                      musculação e as esteiras. Além disso, você pode participar
+                      de aulas em grupo selecionadas, como aeróbica e yoga.
+                    </li>
+                    <li>
+                      Plano Intermediário: Se você deseja um pouco mais de
+                      variedade e orientação em seu programa de treinamento, o
+                      Plano Intermediário pode ser a escolha certa para você.
+                      Com esse plano, você tem acesso a todas as instalações da
+                      academia, incluindo a sala de musculação, áreas de
+                      treinamento funcional e estúdio de fitness. Além disso,
+                      você pode participar de todas as aulas em grupo
+                      disponíveis em nossa programação, como spinning, pilates e
+                      treinamento intervalado de alta intensidade (HIIT).
+                    </li>
+                    <li></li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT ===== -->
+      <section class="about">
+        <div class="container">
+          <div class="section__data">
+            <h2 class="section__subtitle">Sobre nós</h2>
+            <div class="section__titles">
+              <h2 class="section__title-border">TREINE</h2>
+              <h3 class="section__title">CONOSCO</h3>
+            </div>
+          </div>
+
+          <article class="about__program about-pro">
+            <div class="about-image">
+              <img src="{% static 'img/about/about7.png' %}" />
+            </div>
+
+            <div class="about-content about__card">
+              <h2>Exercicios Livres</h2>
+              <p>
+                Os exercicios livres são uma abordagem que se baseia na não
+                utilização de máquinas, focando principalmente no uso de halters
+                ou barra. Ao adotar essa prática, os praticantes buscam realizar
+                de 8 a 12 repetições em cada série, sempre levantando o máximo
+                de peso possível, desde que não comprometa a técnica correta do
+                exercício. O principal objetivo dos exercícios livres é
+                estimular a hipertrofia muscular gradualmente, promovendo o
+                crescimento e fortalecimento dos músculos. Ao contrário das
+                máquinas de academia, que fornecem um movimento guiado, os
+                exercícios livres desafiam o corpo a trabalhar em conjunto para
+                manter o equilíbrio e a estabilidade durante o exercício. Essa
+                abordagem engaja músculos estabilizadores, o que pode resultar
+                em ganhos de força e coordenação adicionais.
+              </p>
+              <p>
+                Ao realizar exercícios livres, é importante que o praticante
+                esteja ciente de seus limites e busque progredir gradualmente. A
+                escolha do peso adequado é crucial para evitar lesões e garantir
+                a execução correta do movimento. A técnica apropriada é
+                fundamental para obter resultados efetivos e minimizar o risco
+                de lesões. Portanto, é recomendado contar com a orientação de um
+                profissional qualificado, como um personal trainer, para obter
+                um treinamento seguro e eficiente.
+              </p>
+              <p>
+                No nosso site, você encontrará informações detalhadas sobre
+                diferentes exercícios livres, dicas de treinamento, planos de
+                treino e muito mais. Estamos aqui para ajudá-lo a alcançar seus
+                objetivos de condicionamento físico de maneira segura, eficiente
+                e prazerosa. Explore nossos recursos e comece sua jornada em
+                direção a uma vida mais ativa e saudável hoje mesmo!
+              </p>
+              <div class="About-btn">
+                <a href="../aboutDetalhes1" class="btn bnt__pricing">
+                  Ver mais <i class="bx bx-right-arrow-alt"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="about__program about-pro">
+            <div class="about-image">
+              <img src="{% static 'img/about/about8.png' %}" />
+            </div>
+            <div class="about-content about__card">
+              <h2>Exercício Máquina</h2>
+              <p>
+                Os exercicios com máquinas, tem uma abordagem amplamente
+                utilizada nos treinos de musculação. Diferentemente dos
+                exercícios livres, os exercícios com máquinas envolvem o uso de
+                equipamentos específicos projetados para trabalhar grupos
+                musculares específicos de forma isolada. O objetivo dos
+                exercícios com máquinas é oferecer um movimento guiado e
+                controlado, permitindo que os praticantes se concentrem na
+                execução precisa dos movimentos e na contração muscular
+                adequada. Essa abordagem é particularmente eficaz para
+                iniciantes ou pessoas que desejam trabalhar de forma mais
+                direcionada em áreas musculares específicas.
+              </p>
+              <p>
+                Ao utilizar as máquinas, é possível ajustar o peso e a
+                resistência de acordo com as necessidades e capacidades
+                individuais. Isso permite que os praticantes progridam
+                gradualmente, aumentando a carga ao longo do tempo para
+                estimular o crescimento muscular e a força. Ao realizar os
+                exercícios com máquinas, é fundamental prestar atenção à postura
+                correta e à biomecânica adequada para evitar lesões e garantir a
+                eficácia do treino.Um dos principais benefícios dos exercícios
+                com máquinas é a capacidade de isolar e trabalhar grupos
+                musculares específicos de maneira segura e eficiente. As
+                máquinas oferecem suporte e estabilidade, reduzindo o risco de
+                lesões relacionadas à estabilização e equilíbrio do corpo. Além
+                disso, elas permitem que os praticantes se concentrem na
+                contração muscular, o que pode resultar em ganhos de força,
+                resistência e definição muscular.
+              </p>
+              <p>
+                No nosso site, você encontrará uma variedade de informações
+                sobre os diferentes tipos de máquinas disponíveis em academias,
+                juntamente com instruções de uso, dicas de treinamento e planos
+                de treino específicos para cada grupo muscular.
+              </p>
+              <div class="About-btn">
+                <a href="../aboutDetalhes2" class="btn bnt__pricing">
+                  Ver mais <i class="bx bx-right-arrow-alt"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="about__program about-pro">
+            <div class="about-image">
+              <img src="{% static 'img/about/about6.png' %}" />
+            </div>
+            <div class="about-content about__card">
+              <h2>Exercício Cardio</h2>
+              <p>
+                Os exercícios cardiovasculares popularmente conhecido como
+                cardio, são uma forma de treinamento que visa melhorar a saúde
+                cardiovascular, aumentar a resistência e queimar calorias. Os
+                exercícios cardio são conhecidos por envolver atividades
+                dinâmicas e de alta intensidade que aceleram o ritmo cardíaco,
+                aumentam a respiração e promovem um bom condicionamento físico.
+              </p>
+              <p>
+                Os exercícios cardio podem ser realizados de várias maneiras,
+                incluindo corrida, ciclismo, natação, pular corda, remo e muito
+                mais. Essas atividades são projetadas para elevar a frequência
+                cardíaca e manter um nível constante de intensidade durante o
+                treino. Ao realizar exercícios cardio, o objetivo é alcançar e
+                manter uma zona de frequência cardíaca específica, que é
+                determinada com base na idade e nos objetivos individuais. Os
+                exercícios cardio têm vários benefícios para a saúde, incluindo
+                a melhoria da capacidade cardiovascular e pulmonar, o
+                fortalecimento do coração, a redução do risco de doenças
+                cardíacas e o aumento do metabolismo. Além disso, eles são uma
+                excelente maneira de queimar calorias, o que pode ajudar na
+                perda de peso e na tonificação do corpo.
+              </p>
+              <p>
+                No nosso site, você encontrará informações abrangentes sobre os
+                diferentes tipos de exercícios cardio, suas técnicas corretas,
+                dicas de treinamento e planos de treino específicos para atingir
+                diferentes objetivos, como perda de peso, aumento da resistência
+                ou melhoria do condicionamento físico geral. Também abordamos
+                equipamentos utilizados em exercícios cardio, como esteiras,
+                bicicletas ergométricas, elípticos e outros.
+              </p>
+              <div class="About-btn">
+                <a href="../aboutDetalhes3" class="btn bnt__pricing">
+                  Ver mais <i class="bx bx-right-arrow-alt"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="content">
+        <div class="footer__top">
+          <div class="logo-details">
+            <img src="{% static 'img/header/header__logo.png' %}" alt="" />
+            <span class="logo_name">Fit Match</span>
+          </div>
+          <div class="media-icons">
+            <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-youtube"></i></a>
+          </div>
+        </div>
+        <div class="link-boxes">
+          <ul class="box">
+            <li class="link_name">Website</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#program">Program</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#choose">Choose</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Services</li>
+            <li><a href="#">App design</a></li>
+            <li><a href="#">Web design</a></li>
+            <li><a href="#">Logo design</a></li>
+            <li><a href="#">Banner design</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Pages</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cronograma.html">Timeline</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="produtos-1.html">Produtos</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Courses</li>
+            <li><a href="#">HTML & CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">Python</a></li>
+            <li><a href="#">Django</a></li>
+          </ul>
+          <ul class="box input-box">
+            <li class="link_name">Subscribe</li>
+            <li>
+              <input
+                type="text"
+                id="form-email"
+                placeholder="Enter your email"
+              />
+            </li>
+            <li><input type="button" value="Subscribe" /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-details">
+        <div class="bottom_text">
+          <span class="copyright_text"
+            >Copyright © 2023 <a href="#">TESTE TESTE.</a>All rights
+            reserved</span
+          >
+          <span class="policy_terms">
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & condition</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== TAKE TO THE TOP ===== -->
+    <div class="top">
+      <a href="#"><i class="bx bxs-up-arrow-alt"></i></a>
+    </div>
+
+    <!-- ===== THEME/COLOR - MODE ===== -->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="fas fa-cog fa-spin spin-toggler"></i>
+      </div>
+      <div class="day-night s-icon"><i class="fa"></i></div>
+      <h4>Theme Colors</h4>
+
+      <div class="colors">
+        <img
+          src="{% static 'img/theme/red.png' %}"
+          alt=""
+          class="color-1"
+          onclick="setActiveStyle('color-1')"
+        />
+        <img
+          src="{% static 'img/theme/purple.png' %}"
+          alt=""
+          class="color-2"
+          onclick="setActiveStyle('color-2')"
+        />
+        <img
+          src="{% static 'img/theme/magenta.png' %}"
+          alt=""
+          class="color-3"
+          onclick="setActiveStyle('color-3')"
+        />
+        <img
+          src="{% static 'img/theme/orange.png' %}"
+          alt=""
+          class="color-4"
+          onclick="setActiveStyle('color-4')"
+        />
+        <img
+          src="{% static 'img/theme/green.png' %}"
+          alt=""
+          class="color-5"
+          onclick="setActiveStyle('color-5')"
+        />
+      </div>
+
+      <div class="colors">
+        <img
+          src="{% static 'img/theme/blue.png' %}"
+          alt=""
+          class="color-6"
+          onclick="setActiveStyle('color-6')"
+        />
+        <img
+          src="{% static 'img/theme/yellow.png' %}"
+          alt=""
+          class="color-7"
+          onclick="setActiveStyle('color-7')"
+        />
+        <img
+          src="{% static 'img/theme/ceano.png' %}"
+          alt=""
+          class="color-8"
+          onclick="setActiveStyle('color-8')"
+        />
+        <img
+          src="{% static 'img/theme/gray.png' %}"
+          alt=""
+          class="color-9"
+          onclick="setActiveStyle('color-9')"
+        />
+        <img
+          src="{% static 'img/theme/light-green.png' %}"
+          alt=""
+          class="color-9"
+          onclick="setActiveStyle('color-10')"
+        />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop--Product</title>
+    <!-- ===== Boxicons CSS ===== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- ===== STYLE CSS ===== -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
+    <!-- ===== THEMES/COLOR - MODE ===== -->
+    <link
+      rel="stylesheet"
+      href="{% static 'css/theme/color-red.css' %}"
+      class="alternate-style"
+      title="color-1"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/theme/color-purple.css' %}"
+      class="alternate-style"
+      title="color-2"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/theme/color-pink.css' %}"
+      class="alternate-style"
+      title="color-3"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/theme/color-orange.css' %}"
+      class="alternate-style"
+      title="color-4"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/theme/color-green.css' %}"
+      class="alternate-style"
+      title="color-5"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/theme/color-blue.css' %}"
+      class="alternate-style"
+      title="color-6"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/theme/color-yellow.css' %}"
+      class="alternate-style"
+      title="color-7"
+      disabled
+    />
+    <!-- ===== SCRIPT ===== -->
+    <script src="{% static 'js/main.js' %}" defer></script>
+    <script src="{% static 'js/theme.js' %}" defer></script>
+    <script src="{% static 'js/produtcs.js' %}" defer></script>
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header>
+      <a href="../site" class="logo"
+        ><img src="{% static 'img/header/header__logo.png' %}"
+      /></a>
+
+      <nav>
+        <ul class="navbar">
+          <li><a href="../">Home</a></li>
+          <li><a href="../timeline">Timeline</a></li>
+          <li><a href="../about">About</a></li>
+          <li><a href="../aboutUs">About Us</a></li>
+          <li><a href="#" class="active">Products</a></li>
+        </ul>
+
+        <div class="icons-mode">
+          <div class="bx bx-menu" id="menu-icon"></div>
+
+          <div class="cart__count">
+            <i class="bx bx-shopping-bag" id="cart-icon"></i>
+            <span class="item-count">0</span>
+          </div>
+
+          <a class="login-icon" href="../login"><i class="bx bxs-user"></i></a>
+        </div>
+
+        <!-- CART -->
+        <div class="cart">
+          <h2 class="cart-title">Your Cart</h2>
+          <!-- CONTENT -->
+
+          <div class="cart-content">
+            <!-- TEST BOX -->
+          </div>
+
+          <!-- TOTAL -->
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+          </div>
+          <!-- BUY BUTTON -->
+          <div class="cart__btn">
+            <button type="button" class="btn-buy">Buy Now</button>
+            <button type="button" class="to-clean">Clean</button>
+          </div>
+          <!-- CART CLOSE -->
+          <i class="bx bx-x" id="cart-close"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT OF THE WEBSITE ===== -->
+    <main class="main">
+      <!-- ===== BANNER PAGE ===== -->
+      <section class="page-header-2 program section__program">
+        <div class="container">
+          <div class="section__data">
+            <h2 class="section__subtitle">Nossos Produtos</h2>
+            <div class="section__titles">
+              <h2 class="section__title-border">Conehcar Nossos Planos</h2>
+              <h3 class="section__title">40% de Desconto#</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SHOP SCTION ===== -->
+      <section class="shop container">
+        <div class="section__data">
+          <div class="section__titles">
+            <h2 class="section__title-border">Produtos</h2>
+            <h3 class="section__title">Em Oferta#</h3>
+          </div>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+          <button class="filter-button active" data-filter="all">Todos</button>
+          <button class="filter-button" data-filter="garrafas">Garrafas</button>
+          <button class="filter-button" data-filter="suplementos">
+            Suplementos
+          </button>
+          <button class="filter-button" data-filter="pesos">Pesos</button>
+          <input type="text" id="search-input" placeholder="Search products" />
+        </div>
+
+        <!-- CONTENT -->
+        <div class="shop-content">
+          <article class="product-box" data-category="garrafas">
+            <a href="#">
+              <img
+                src="{% static 'img/products/product-1-1.jpg' %}"
+                alt="Garrafa Galão Preto da Growth Supplements"
+                class="product-img"
+              />
+            </a>
+            <h2 class="product-title tag-popular">
+              GALÃO PRETO 2 LITROS - GROWTH SUPPLEMENTS
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$20,70 </span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box" data-category="suplementos">
+            <a href="#">
+              <img
+                src="{% static 'img/products/product-2-1.jpg' %}"
+                alt="whey sabor chocolate"
+                class="product-img"
+            /></a>
+            <h2 class="product-title tag-novo">
+              Waxy Whey - 2kg - Bodybuilders Sabor Chocolate
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star-half"></i>
+            </div>
+            <span class="product-price">$86,90</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box" data-category="pesos">
+            <img
+              src="{% static 'img/products/product-10.jpg' %}"
+              alt="Peso de 22kg c/Alça pintada colorido"
+              class="product-img"
+            />
+            <h2 class="product-title tag-egotado">
+              Kettlebell Emborrachado c/ Alça Pintada Colorido Peso:22KG
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$375,15</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box" data-category="pesos">
+            <img
+              src="{% static 'img/products/product-7.jpg' %}"
+              alt="kit 2 barras e anilhas com peso total de 32kg"
+              class="product-img"
+            />
+            <h2 class="product-title">
+              Kit 2x Barras 40cm + Presilhas + 32Kg Anilhas em PVC
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$299,99</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box" data-category="garrafas">
+            <img
+              src="{% static 'img/products/product-16.jp' %}g"
+              alt="Garrafa Azul de 600ML da Growth Supplements"
+              class="product-img"
+            />
+            <h2 class="product-title">
+              Coqueteleira Azul - Growth Supplements - 600ml
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$14,16 </span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box" data-category="suplementos">
+            <a href="#">
+              <img
+                src="{% static 'img/products/product-14.jpg' %}"
+                alt="Suplemento Growth Supplements Creatina Creapure De 100g"
+                class="product-img"
+            /></a>
+            <h2 class="product-title">
+              Suplemento Growth Supplements Creatina Creapure De 100g
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$74,90</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box" data-category="pesos">
+            <img
+              src="{% static 'img/products/product-3.jpg' %}"
+              alt="Peso de 20kg emborrachado"
+              class="product-img"
+            />
+            <h2 class="product-title">
+              Kettlebell Emborrachado 20kg – Peso Academia Exercit Esportes
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$338,00</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box" data-category="pesos">
+            <img
+              src="{% static 'img/products/product-4.jpg' %}"
+              alt="Anilha de ferro pintada, Unisses Adulto"
+              class="product-img"
+            />
+            <h2 class="product-title">
+              POLIMET Anilha de Ferro Pintada, Unissex Adulto
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$39,10</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box" data-category="garrafas">
+            <img
+              src="{% static 'img/products/product-13.jpg' %}"
+              alt="Garrafa Galão vermelho da Growth Supplements"
+              class="product-img"
+            />
+            <h2 class="product-title">
+              Galão Vermelho 2 Litros - Growth Supplements
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$20,70 </span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box" data-category="suplementos">
+            <a href="#">
+              <img
+                src="{% static 'img/products/product-9.jpg' %}"
+                alt="POWER ARGININE (120 CAPS) - GROWTH SUPPLEMENTS"
+                class="product-img"
+            /></a>
+            <h2 class="product-title">
+              POWER ARGININE (120 CAPS) - GROWTH SUPPLEMENTS
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$27,00</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box" data-category="pesos">
+            <img
+              src="{% static 'img/products/product-8.jpg' %}"
+              alt="Halteres emborrachado"
+              class="product-img"
+            />
+            <h2 class="product-title">Kit Halteres Emborrachado</h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$278,90</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box" data-category="pesos">
+            <img
+              src="{% static 'img/products/product-6.jpg' %}"
+              alt="Suporte para Anilhas de até 500kg"
+              class="product-img"
+            />
+            <h2 class="product-title">
+              Suporte para Anilhas de Academia de até 500KG | Equipamentos Line
+              Fitness
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$569,90</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box" data-category="garrafas">
+            <img
+              src="{% static 'img/products/product-12.jpg' %}"
+              alt="garrafa preta de 800ml da Growth Suplements"
+              class="product-img"
+            />
+            <h2 class="product-title">
+              Squeeze Copo Garrafa De Academia Treino Preto 800ml Growth
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$38,90 </span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box" data-category="suplementos">
+            <a href="#">
+              <img
+                src="{% static 'img/products/product-5.jpg' %}"
+                alt="Whey protein de sabor de chocolate"
+                class="product-img"
+            /></a>
+            <h2 class="product-title">
+              Growth Suplemento Whey Concentrado Proteina Chocolate
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$96,25</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box" data-category="pesos">
+            <img
+              src="{% static 'img/products/product-11.jpg' %}"
+              alt="peso de academia de 16kg "
+              class="product-img"
+            />
+            <h2 class="product-title">
+              Peso Musculação E Crossfit - Kettlebell Emborrachado 16kg
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$108,18</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box" data-category="pesos">
+            <img
+              src="{% static 'img/products/product-15.jpg' %}"
+              alt="conjunto de halteres 50kg"
+              class="product-img"
+            />
+            <h2 class="product-title">
+              Conjunto de halteres de borracha hexagonal 50kg sem marca
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$165,45</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== PAGINATION ===== -->
+      <section id="pagination">
+        <a href="../products1"><i class="bx bx-left-arrow-alt"></i></a>
+        <a href="../produtos1">1</a>
+        <a href="#" class="active-pagination">2</a>
+        <a href="../products3">3</a>
+        <a href="../products3"><i class="bx bx-right-arrow-alt"></i></a>
+      </section>
+
+      <!-- ===== REVIEWS ===== -->
+      <section class="reviews container">
+        <div class="section__data">
+          <div class="section__titles">
+            <h2 class="section__title-border">Veja as</h2>
+            <h3 class="section__title">REVIEWS</h3>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial-text">
+            <div class="user-text active-text">
+              <i class="fas fa-quote-left"></i>
+              <p>
+                Fit Match &eacute; uma academia incr&Iacute;vel! A equipe de
+                instrutores &eacute; altamente qualificada e motivadora. Eles
+                est&atilde;o sempre prontos para ajudar e fornecer
+                orienta&ccedil;&otilde;es personalizadas. Senti-me apoiado em
+                cada etapa da minha jornada de condicionamento f&Iacute;sico.
+              </p>
+              <i class="fas fa-quote-left right"></i>
+              <span>Jos&eacute;</span>
+            </div>
+
+            <div class="user-text">
+              <i class="fas fa-quote-left"></i>
+              <p>
+                A variedade de aulas oferecidas na Fit Match &eacute;
+                impressionante. Desde treinamento de for&ccedil;a at&eacute;
+                aulas de dan&ccedil;a e ioga, h&aacute; algo para todos os
+                gostos e n&Iacute;veis de condicionamento f&Iacute;sico. Nunca
+                me senti entediado ou estagnado com a rotina de
+                exerc&Iacute;cios. A infraestrutura da Fit Match &eacute;
+                moderna e bem equipada. As instala&ccedil;&otilde;es s&atilde;o
+                limpas e bem cuidadas.
+              </p>
+              <i class="fas fa-quote-left right"></i>
+              <span>Francisco</span>
+            </div>
+
+            <div class="user-text">
+              <i class="fas fa-quote-left"></i>
+              <p>
+                O ambiente da Fit Match &eacute; acolhedor e amig&aacute;vel.
+                Desde o momento em que entrei pela primeira vez, fui recebido
+                com um sorriso caloroso pelos funcion&aacute;rios. Os membros
+                tamb&eacute;m s&atilde;o encorajadores e motivadores, criando
+                uma comunidade que se apoia mutuamente em busca de objetivos
+                comuns.
+              </p>
+              <i class="fas fa-quote-left right"></i>
+              <span>Luiz</span>
+            </div>
+
+            <div class="user-text">
+              <i class="fas fa-quote-left"></i>
+              <p>
+                Uma coisa que realmente diferencia a Fit Match &eacute; o seu
+                programa de acompanhamento personalizado. Eles fornecem
+                avalia&ccedil;&otilde;es regulares, planejamento de metas e
+                dicas nutricionais. Isso me ajudou a manter o foco e
+                alcan&ccedil;ar resultados vis&Iacute;veis. Sinto-me
+                verdadeiramente cuidado e apoiado pela equipe da Fit Match.
+              </p>
+              <i class="fas fa-quote-left right"></i>
+              <span>Paulo</span>
+            </div>
+
+            <div class="user-text">
+              <i class="fas fa-quote-left"></i>
+              <p>
+                A infraestrutura da Fit Match &eacute; moderna e bem equipada.
+                As instala&ccedil;&otilde;es s&atilde;o limpas e bem cuidadas.
+                Al&eacute;m disso, eles possuem equipamentos de &uacute;ltima
+                gera&ccedil;&atilde;o que tornam o treinamento mais eficiente e
+                divertido. Sem d&uacute;vida, uma academia que valoriza o
+                conforto dos seus membros.
+              </p>
+              <i class="fas fa-quote-left right"></i>
+              <span>Geraldo</span>
+            </div>
+          </div>
+
+          <div class="testimonial-pic">
+            <img
+              src="{% static 'img/reviews/user1.png' %}"
+              class="user-pic active-pic"
+              onclick="showReview(event)"
+            />
+            <img
+              src="{% static 'img/reviews/user2.png' %}"
+              class="user-pic"
+              onclick="showReview(event)"
+            />
+            <img
+              src="{% static 'img/reviews/user3.png' %}"
+              class="user-pic"
+              onclick="showReview(event)"
+            />
+            <img
+              src="{% static 'img/reviews/user4.png' %}"
+              class="user-pic"
+              onclick="showReview(event)"
+            />
+            <img
+              src="{% static 'img/reviews/user5.png' %}"
+              class="user-pic"
+              onclick="showReview(event)"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="content">
+        <div class="footer__top">
+          <div class="logo-details">
+            <img src="{% static 'img/header/header__logo.png' %}" alt="" />
+            <span class="logo_name">Fit Match</span>
+          </div>
+          <div class="media-icons">
+            <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-youtube"></i></a>
+          </div>
+        </div>
+        <div class="link-boxes">
+          <ul class="box">
+            <li class="link_name">Company</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Get started</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Services</li>
+            <li><a href="#">App design</a></li>
+            <li><a href="#">Web design</a></li>
+            <li><a href="#">Logo design</a></li>
+            <li><a href="#">Banner design</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Account</li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">My account</a></li>
+            <li><a href="#">Prefrences</a></li>
+            <li><a href="#">Purchase</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Courses</li>
+            <li><a href="#">HTML & CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">Photography</a></li>
+            <li><a href="#">Photoshop</a></li>
+          </ul>
+          <ul class="box input-box">
+            <li class="link_name">Subscribe</li>
+            <li><input type="text" placeholder="Enter your email" /></li>
+            <li><input type="button" value="Subscribe" /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-details">
+        <div class="bottom_text">
+          <span class="copyright_text"
+            >Copyright © 2023 <a href="#">Fit Match.</a>All rights
+            reserved</span
+          >
+          <span class="policy_terms">
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & condition</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== TAKE TO THE TOP ===== -->
+    <div class="top">
+      <a href="#"><i class="bx bxs-up-arrow-alt"></i></a>
+    </div>
+
+    <!-- ===== THEME/COLOR -MODE ===== -->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="fas fa-cog fa-spin spin-toggler"></i>
+      </div>
+      <div class="day-night s-icon"><i class="fa"></i></div>
+      <h4>Theme Colors</h4>
+
+      <div class="colors">
+        <img
+          src="{% static 'img/theme/red.png' %}"
+          alt=""
+          class="color-1"
+          onclick="setActiveStyle('color-1')"
+        />
+        <img
+          src="{% static 'img/theme/purple.png' %}"
+          alt=""
+          class="color-2"
+          onclick="setActiveStyle('color-2')"
+        />
+        <img
+          src="{% static 'img/theme/magenta.png' %}"
+          alt=""
+          class="color-3"
+          onclick="setActiveStyle('color-3')"
+        />
+        <img
+          src="{% static 'img/theme/orange.png' %}"
+          alt=""
+          class="color-4"
+          onclick="setActiveStyle('color-4')"
+        />
+        <img
+          src="{% static 'img/theme/green.png' %}"
+          alt=""
+          class="color-5"
+          onclick="setActiveStyle('color-5')"
+        />
+      </div>
+
+      <div class="colors">
+        <img
+          src="{% static 'img/theme/blue.png' %}"
+          alt=""
+          class="color-6"
+          onclick="setActiveStyle('color-6')"
+        />
+        <img
+          src="{% static 'img/theme/yellow.png' %}"
+          alt=""
+          class="color-7"
+          onclick="setActiveStyle('color-7')"
+        />
+        <img
+          src="{% static 'img/theme/ceano.png' %}"
+          alt=""
+          class="color-8"
+          onclick="setActiveStyle('color-8')"
+        />
+        <img
+          src="{% static 'img/theme/gray.png' %}"
+          alt=""
+          class="color-9"
+          onclick="setActiveStyle('color-9')"
+        />
+        <img
+          src="{% static 'img/theme/light-green.png' %}"
+          alt=""
+          class="color-10"
+          onclick="setActiveStyle('color-10')"
+        />
+      </div>
+    </div>
+  </body>
+</html>
